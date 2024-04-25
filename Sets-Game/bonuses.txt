@@ -1,0 +1,40 @@
+BONUS CHALLENGE FORM
+--------------------
+
+For each bonus challenge you have implemented, please replace the sentence "We are not entitled to this bonus."
+with a short description of:
+
+1. How it was implemented in your code
+2. Where it was used (in which class methods).
+3. How you tested that it is working correctly.
+
+--------------------
+
+1. Fully supporting all configuration fields and avoiding the use of magic numbers
+
+How it was implemented: All configuration fields are defined as public final fields in the Config class. Magic numbers are replaced with these fields.
+Where it was used: Throughout the codebase, wherever configuration values are required.
+Testing: Ensured that configuration values are properly loaded and utilized in the program and that changes to configuration values reflect appropriately in the program's behavior.
+--------------------
+
+2. Terminating all threads (that you created) gracefully and in reverse order to the order they were created in.
+
+How it was implemented: Graceful termination of threads is implemented in the terminate() methods of the Dealer and Player classes, where threads are interrupted.
+Where it was used: terminate() method of the Dealer and Player classes.
+Testing: Tested by creating multiple threads in a specific order, then terminating them and verifying that they are terminated in reverse order by printing without causing any deadlock or unexpected behavior.
+--------------------
+
+3. Handling the config.turnTimeoutMillis value as follows:
+config.turnTimeoutMillis < 0: display nothing.
+config.turnTimeoutMillis = 0: display a timer since the last action (reshuffle or set collected).
+Note: in modes without a countdown timer the dealer must ensure there is always at least one legal set on the table.
+
+We are not entitled to this bonus.
+
+--------------------
+
+4. Making sure that the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be
+changed on the display, key input needs to be handled, etc.) and the only threads created by you are:
+1 thread per player + 1 additional thread for non-human players.
+
+We are not entitled to this bonus.
